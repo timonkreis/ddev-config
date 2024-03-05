@@ -1,0 +1,27 @@
+{
+    "name": "timonkreis/ddev-project-config",
+    "description": "DDEV setup for web projects.",
+    "license": "GPL-3.0-or-later",
+    "authors": [
+        {
+            "name": "Timon Kreis",
+            "email": "mail@timonkreis.de",
+            "homepage": "https://www.timonkreis.de/",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": ">=7.4"
+    },
+    "keywords": [
+        "dev"
+    ],
+    "autoload": {
+        "files": [
+            "init.php"
+        ],
+        "psr-4": {
+            "TimonKreis\\DDEVProjectConfig\\": "src"
+        }
+    }
+}

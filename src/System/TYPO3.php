@@ -1,0 +1,66 @@
+<?php
+declare(strict_types=1);
+
+namespace TimonKreis\DDEVProjectConfig\System;
+
+use TimonKreis\DDEVProjectConfig\AbstractSystem;
+use TYPO3\CMS\Core\Core\Environment;
+
+/**
+ * @noinspection PhpUnused
+ * @package TimonKreis\DDEVProjectConfig\System
+ */
+class TYPO3 extends AbstractSystem
+{
+    /**
+     * @return bool
+     */
+    public function isApplicable(): bool
+    {
+        return $_SERVER['DDEV_PROJECT_TYPE'] === 'typo3';
+    }
+
+    /**
+     *
+     */
+    public function setup(): void
+    {
+        // Default database credentials
+        $GLOBALS['TYPO3_CONF_VARS']['DB']['Connections']['Default']['driver'] = $this->get('db/driver');
+        $GLOBALS['TYPO3_CONF_VARS']['DB']['Connections']['Default']['charset'] = $this->get('db/charset');
+        $GLOBALS['TYPO3_CONF_VARS']['DB']['Connections']['Default']['host'] = $this->get('db/host');
+        $GLOBALS['TYPO3_CONF_VARS']['DB']['Connections']['Default']['port'] = $this->get('db/port');
+        $GLOBALS['TYPO3_CONF_VARS']['DB']['Connections']['Default']['user'] = $this->get('db/user');
+        $GLOBALS['TYPO3_CONF_VARS']['DB']['Connections']['Default']['password'] = $this->get('db/password');
+        $GLOBALS['TYPO3_CONF_VARS']['DB']['Connections']['Default']['dbname'] = $this->get('db/database');
+
+        // Disable forcing SSL encryption for backend
+        $GLOBALS['TYPO3_CONF_VARS']['BE']['lockSSL'] = false;
+
+        // Reverse proxy configuration
+        $GLOBALS['TYPO3_CONF_VARS']['SYS']['reverseProxySSL'] = '*';
+        $GLOBALS['TYPO3_CONF_VARS']['SYS']['reverseProxyIP'] = '*';
+        $GLOBALS['TYPO3_CONF_VARS']['SYS']['trustedHostsPattern'] = $_SERVER['HTTP_HOST'] ?? '.*';
+        $GLOBALS['TYPO3_CONF_VARS']['SYS']['reverseProxyHeaderMultiValue'] = 'first';
+
+        // Allow HTTP requests for non-secure URLs
+        $GLOBALS['TYPO3_CONF_VARS']['HTTP']['verify'] = false;
+
+        // Debugging
+        if (Environment::getContext()->isDevelopment() || Environment::getContext()->isTesting()) {
+            $GLOBALS['TYPO3_CONF_VARS']['BE']['debug'] = true;
+            $GLOBALS['TYPO3_CONF_VARS']['FE']['disableNoCacheParameter'] = false;
+            $GLOBALS['TYPO3_CONF_VARS']['SYS']['devIPmask'] = '*';
+            $GLOBALS['TYPO3_CONF_VARS']['SYS']['displayErrors'] = 1;
+            $GLOBALS['TYPO3_CONF_VARS']['SYS']['exceptionalErrors'] = 28674;
+        }
+    }
+
+    /**
+     * @return array
+     */
+    protected function getSystemDefaults(): array
+    {
+        return [];
+    }
+}
