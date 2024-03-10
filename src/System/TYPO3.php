@@ -1,14 +1,14 @@
 <?php
 declare(strict_types=1);
 
-namespace TimonKreis\DDEVProjectConfig\System;
+namespace TimonKreis\DDEVConfig\System;
 
-use TimonKreis\DDEVProjectConfig\AbstractSystem;
+use TimonKreis\DDEVConfig\AbstractSystem;
 use TYPO3\CMS\Core\Core\Environment;
 
 /**
  * @noinspection PhpUnused
- * @package TimonKreis\DDEVProjectConfig\System
+ * @package TimonKreis\DDEVConfig\System
  */
 class TYPO3 extends AbstractSystem
 {

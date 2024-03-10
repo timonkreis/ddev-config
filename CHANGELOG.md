@@ -5,5 +5,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) 
 
 ## [Unreleased]
 
+## [2024-03-10]
+Project renamed.
+
 ## [2024-03-05]
 Initial commit.

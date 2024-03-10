@@ -1,10 +1,10 @@
 <?php
 declare(strict_types=1);
 
-namespace TimonKreis\DDEVProjectConfig;
+namespace TimonKreis\DDEVConfig;
 
 /**
- * @package TimonKreis\DDEVProjectConfig
+ * @package TimonKreis\DDEVConfig
  */
 class Setup
 {

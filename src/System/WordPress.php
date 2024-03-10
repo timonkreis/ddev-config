@@ -1,13 +1,13 @@
 <?php
 declare(strict_types=1);
 
-namespace TimonKreis\DDEVProjectConfig\System;
+namespace TimonKreis\DDEVConfig\System;
 
-use TimonKreis\DDEVProjectConfig\AbstractSystem;
+use TimonKreis\DDEVConfig\AbstractSystem;
 
 /**
  * @noinspection PhpUnused
- * @package TimonKreis\DDEVProjectConfig
+ * @package TimonKreis\DDEVConfig
  */
 class WordPress extends AbstractSystem
 {

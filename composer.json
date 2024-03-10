@@ -1,6 +1,6 @@
 {
-    "name": "timonkreis/ddev-project-config",
-    "description": "DDEV setup for web projects.",
+    "name": "timonkreis/ddev-config",
+    "description": "DDEV configuration for web projects.",
     "license": "GPL-3.0-or-later",
     "authors": [
         {
@@ -21,7 +21,7 @@
             "init.php"
         ],
         "psr-4": {
-            "TimonKreis\\DDEVProjectConfig\\": "src"
+            "TimonKreis\\DDEVConfig\\": "src"
         }
     }
 }

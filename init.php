@@ -6,5 +6,5 @@ declare(strict_types=1);
  * @param array $configuration
  */
 function ddev(array $configuration = []): void {
-    new TimonKreis\DDEVProjectConfig\Setup($configuration);
+    new TimonKreis\DDEVConfig\Setup($configuration);
 }

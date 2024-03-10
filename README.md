@@ -5,7 +5,7 @@ This package provides several default configurations for web projects using a DD
 Use the following command to install it via Composer:
 
 ```bash
-composer require --dev timonkreis/ddev-project-config:dev-main
+composer require --dev timonkreis/ddev-config:dev-main
 ```
 
 ## Project setups
