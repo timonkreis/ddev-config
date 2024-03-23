@@ -43,6 +43,16 @@ class TYPO3 extends AbstractSystem
         $GLOBALS['TYPO3_CONF_VARS']['SYS']['trustedHostsPattern'] = $_SERVER['HTTP_HOST'] ?? '.*';
         $GLOBALS['TYPO3_CONF_VARS']['SYS']['reverseProxyHeaderMultiValue'] = 'first';
 
+        // SMTP configuration
+        $GLOBALS['TYPO3_CONF_VARS']['MAIL']['defaultMailFromName'] = $this->get('mail/from/name');
+        $GLOBALS['TYPO3_CONF_VARS']['MAIL']['defaultMailFromAddress'] = $this->get('mail/from/address');
+        $GLOBALS['TYPO3_CONF_VARS']['MAIL']['transport'] = 'smtp';
+        $GLOBALS['TYPO3_CONF_VARS']['MAIL']['transport_smtp_server'] = $this->get('mail/smtp/host') . ':'
+            . $this->get('mail/smtp/port');
+        $GLOBALS['TYPO3_CONF_VARS']['MAIL']['transport_smtp_username'] = $this->get('mail/smtp/user');
+        $GLOBALS['TYPO3_CONF_VARS']['MAIL']['transport_smtp_password'] = $this->get('mail/smtp/password');
+        $GLOBALS['TYPO3_CONF_VARS']['MAIL']['transport_smtp_encrypt'] = false;
+
         // Allow HTTP requests for non-secure URLs
         $GLOBALS['TYPO3_CONF_VARS']['HTTP']['verify'] = false;
 

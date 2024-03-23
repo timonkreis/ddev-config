@@ -37,7 +37,7 @@ abstract class AbstractSystem
 
             'mail/from/name' => $_SERVER['DDEV_SITENAME'],
             'mail/from/address' => 'noreply@' . $_SERVER['DDEV_HOSTNAME'],
-            'mail/smtp/host' => 'mailpit',
+            'mail/smtp/host' => '127.0.0.1',
             'mail/smtp/port' => 1025,
             'mail/smtp/user' => 'noreply@' . $_SERVER['DDEV_HOSTNAME'],
             'mail/smtp/password' => '123456',
