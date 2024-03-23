@@ -56,6 +56,9 @@ class TYPO3 extends AbstractSystem
         // Allow HTTP requests for non-secure URLs
         $GLOBALS['TYPO3_CONF_VARS']['HTTP']['verify'] = false;
 
+        // Dummy password for install tool to prevent 404 errors
+        $GLOBALS['TYPO3_CONF_VARS']['BE']['installToolPassword'] = '1';
+
         // Debugging
         if (Environment::getContext()->isDevelopment() || Environment::getContext()->isTesting()) {
             $GLOBALS['TYPO3_CONF_VARS']['BE']['debug'] = true;
