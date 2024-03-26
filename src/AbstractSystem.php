@@ -36,10 +36,10 @@ abstract class AbstractSystem
             'db/password' => 'db',
 
             'mail/from/name' => $_SERVER['DDEV_SITENAME'],
-            'mail/from/address' => 'noreply@' . $_SERVER['DDEV_HOSTNAME'],
+            'mail/from/address' => 'noreply@' . $_SERVER['DDEV_PROJECT'] . '.' . $_SERVER['DDEV_TLD'],
             'mail/smtp/host' => '127.0.0.1',
             'mail/smtp/port' => 1025,
-            'mail/smtp/user' => 'noreply@' . $_SERVER['DDEV_HOSTNAME'],
+            'mail/smtp/user' => 'noreply@' . $_SERVER['DDEV_PROJECT'] . '.' . $_SERVER['DDEV_TLD'],
             'mail/smtp/password' => '123456',
         ];
     }
