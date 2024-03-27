@@ -1,6 +1,10 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## 2024-03-27
+* Changed
+  * Set encryption key only when undefined.
+
 ## 2024-03-26
 * Fixed
   * Fix default sender address and SMTP username.

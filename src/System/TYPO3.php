@@ -60,7 +60,9 @@ class TYPO3 extends AbstractSystem
         $GLOBALS['TYPO3_CONF_VARS']['HTTP']['verify'] = false;
 
         // Dummy encryption key
-        $GLOBALS['TYPO3_CONF_VARS']['SYS']['encryptionKey'] = 'WithGreatPowerComesGreatResponsibility';
+        if (!isset($GLOBALS['TYPO3_CONF_VARS']['SYS']['encryptionKey'])) {
+            $GLOBALS['TYPO3_CONF_VARS']['SYS']['encryptionKey'] = 'WithGreatPowerComesGreatResponsibility';
+        }
 
         // Dummy password for install tool to prevent 404 errors
         $GLOBALS['TYPO3_CONF_VARS']['BE']['installToolPassword'] = '1';
