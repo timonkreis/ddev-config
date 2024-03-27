@@ -4,6 +4,7 @@ All notable changes to this project will be documented in this file.
 ## 2024-03-27
 * Changed
   * Set encryption key only when undefined.
+  * Set install tool password only when undefined.
 
 ## 2024-03-26
 * Fixed

@@ -65,7 +65,9 @@ class TYPO3 extends AbstractSystem
         }
 
         // Dummy password for install tool to prevent 404 errors
-        $GLOBALS['TYPO3_CONF_VARS']['BE']['installToolPassword'] = '1';
+        if (!isset($GLOBALS['TYPO3_CONF_VARS']['BE']['installToolPassword'])) {
+            $GLOBALS['TYPO3_CONF_VARS']['BE']['installToolPassword'] = '1';
+        }
 
         // Debugging
         if (Environment::getContext()->isDevelopment() || Environment::getContext()->isTesting()) {
