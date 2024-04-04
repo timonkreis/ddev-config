@@ -1,6 +1,10 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## 2024-04-04
+* Changed
+  * Update README.md.
+
 ## 2024-03-27
 * Changed
   * Set encryption key only when undefined.
