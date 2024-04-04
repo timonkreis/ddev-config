@@ -11,7 +11,7 @@ abstract class AbstractSystem
     /**
      * @var array
      */
-    private array $_configuration;
+    private $_configuration;
 
     /**
      * @param array $configuration

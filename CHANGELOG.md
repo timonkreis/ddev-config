@@ -2,6 +2,8 @@
 All notable changes to this project will be documented in this file.
 
 ## 2024-04-04
+* Added
+  * Add support for older PHP versions.
 * Changed
   * Update README.md.
 
