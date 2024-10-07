@@ -1,6 +1,10 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## 2024-10-07
+* Changed
+  * Optimize database host.
+
 ## 2024-04-11
 * Fixed
   * Fix install tool password if it is set but empty.

@@ -29,7 +29,7 @@ abstract class AbstractSystem
         return [
             'db/driver' => 'mysqli',
             'db/charset' => 'utf8',
-            'db/host' => 'ddev-' . $_SERVER['DDEV_PROJECT'] . '-db',
+            'db/host' => 'db',
             'db/port' => 3306,
             'db/user' => 'db',
             'db/database' => 'db',
