@@ -6,4 +6,5 @@
 /docs export-ignore
 /LICENSE.md export-ignore
 /mocks export-ignore
+/phpstan.neon.dist export-ignore
 /README.md export-ignore

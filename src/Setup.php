@@ -3,13 +3,10 @@ declare(strict_types=1);
 
 namespace TimonKreis\DDEVConfig;
 
-/**
- * @package TimonKreis\DDEVConfig
- */
 class Setup
 {
     /**
-     * @param array $configuration
+     * @param array<string, mixed> $configuration
      */
     public function __construct(array $configuration)
     {
@@ -17,7 +14,7 @@ class Setup
             throw new \Error('Project seems to be no DDEV project!');
         }
 
-        foreach (glob(__DIR__ . '/System/*.php') as $file) {
+        foreach (glob(__DIR__ . '/System/*.php') ?: [] as $file) {
             $className = __NAMESPACE__ . '\System\\' . substr(basename($file), 0, -4);
 
             if (class_exists($className)) {

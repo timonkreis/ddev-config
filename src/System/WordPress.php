@@ -7,21 +7,14 @@ use TimonKreis\DDEVConfig\AbstractSystem;
 
 /**
  * @noinspection PhpUnused
- * @package TimonKreis\DDEVConfig
  */
 class WordPress extends AbstractSystem
 {
-    /**
-     * @return bool
-     */
     public function isApplicable(): bool
     {
         return $_SERVER['DDEV_PROJECT_TYPE'] === 'wordpress';
     }
 
-    /**
-     * @return array
-     */
     protected function getSystemDefaults(): array
     {
         return [
@@ -33,15 +26,8 @@ class WordPress extends AbstractSystem
         ];
     }
 
-    /**
-     *
-     */
     public function setup(): void
     {
-        /**
-         * @param string $name
-         * @param string $key
-         */
         $define = function(string $name, string $key): void {
             defined($name) || define($name, $this->get($key));
         };

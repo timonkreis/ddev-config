@@ -3,18 +3,15 @@ declare(strict_types=1);
 
 namespace TimonKreis\DDEVConfig;
 
-/**
- * @package TimonKreis\DDEVConfig
- */
 abstract class AbstractSystem
 {
     /**
-     * @var array
+     * @var array<string, mixed>
      */
     private $_configuration;
 
     /**
-     * @param array $configuration
+     * @param array<string, mixed> $configuration
      */
     public function __construct(array $configuration)
     {
@@ -22,7 +19,7 @@ abstract class AbstractSystem
     }
 
     /**
-     * @return array
+     * @return array<string, mixed>
      */
     protected function getGlobalDefaults(): array
     {
@@ -45,8 +42,6 @@ abstract class AbstractSystem
     }
 
     /**
-     * Get configuration value
-     *
      * @param string $key
      * @return mixed
      */
@@ -67,25 +62,12 @@ abstract class AbstractSystem
         throw new \Error('Configuration key "' . $key . '" does not exist!');
     }
 
-    /**
-     * Check if the system is applicable
-     *
-     * @noinspection PhpUnused
-     * @return bool
-     */
     abstract public function isApplicable(): bool;
 
     /**
-     * Get default values of the system
-     *
-     * @return array
+     * @return array<string, mixed>
      */
     abstract protected function getSystemDefaults(): array;
 
-    /**
-     * Setup the system
-     *
-     * @noinspection PhpUnused
-     */
     abstract public function setup(): void;
 }

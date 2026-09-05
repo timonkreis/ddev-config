@@ -8,21 +8,14 @@ use TYPO3\CMS\Core\Core\Environment;
 
 /**
  * @noinspection PhpUnused
- * @package TimonKreis\DDEVConfig\System
  */
 class TYPO3 extends AbstractSystem
 {
-    /**
-     * @return bool
-     */
     public function isApplicable(): bool
     {
         return $_SERVER['DDEV_PROJECT_TYPE'] === 'typo3';
     }
 
-    /**
-     *
-     */
     public function setup(): void
     {
         // Default database credentials
@@ -79,9 +72,6 @@ class TYPO3 extends AbstractSystem
         }
     }
 
-    /**
-     * @return array
-     */
     protected function getSystemDefaults(): array
     {
         return [];

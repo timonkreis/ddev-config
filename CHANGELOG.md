@@ -4,6 +4,7 @@ All notable changes to this project will be documented in this file.
 ## 2026-09-05
 * Added
   * Add configuration for Claude.
+  * Add PhpStan and optimize codestyle.
 * Changed
   * Add `composer.lock` to `.gitignore`.
 
