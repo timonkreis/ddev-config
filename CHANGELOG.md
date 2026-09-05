@@ -1,6 +1,10 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## 2026-09-05
+* Changed
+  * Add `composer.lock` to `.gitignore`.
+
 ## 2024-10-07
 * Changed
   * Optimize database host.
