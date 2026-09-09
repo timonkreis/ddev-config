@@ -65,7 +65,6 @@ class TYPO3 extends AbstractSystem
         // Debugging
         if (Environment::getContext()->isDevelopment() || Environment::getContext()->isTesting()) {
             $GLOBALS['TYPO3_CONF_VARS']['BE']['debug'] = true;
-            $GLOBALS['TYPO3_CONF_VARS']['FE']['debug'] = true;
             $GLOBALS['TYPO3_CONF_VARS']['FE']['disableNoCacheParameter'] = false;
             $GLOBALS['TYPO3_CONF_VARS']['SYS']['devIPmask'] = '*';
             $GLOBALS['TYPO3_CONF_VARS']['SYS']['displayErrors'] = 1;

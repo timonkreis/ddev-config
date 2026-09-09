@@ -1,10 +1,6 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
-## 2026-09-06
-* Added
-  * Add debug flag for TYPO3 frontend.
-
 ## 2026-09-05
 * Added
   * Add configuration for Claude.
